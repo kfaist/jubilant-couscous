@@ -1,0 +1,19 @@
+# Node modules
+node_modules/
+
+# Python cache
+__pycache__/
+
+# Environment variables
+.env
+
+# Logs
+*.log
+
+# Local directory for test outputs
+/test_output/
+
+# IDE configurations
+.vscode/
+.idea/
+*.sublime-*
