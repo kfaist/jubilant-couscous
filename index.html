@@ -12,7 +12,67 @@
     </header>
 
     <main>
-      <p>Welcome to the app foundation. Start building here.</p>
+      <section class="profile-settings">
+        <h2>User Profile Settings</h2>
+
+        <form id="profile-form" novalidate>
+          <fieldset>
+            <legend>Personal Information</legend>
+
+            <div class="form-group">
+              <label for="display-name">Display Name</label>
+              <input type="text" id="display-name" name="displayName" placeholder="Your name" maxlength="80" />
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="you@example.com" />
+            </div>
+
+            <div class="form-group">
+              <label for="bio">Bio</label>
+              <textarea id="bio" name="bio" rows="4" placeholder="Tell us a bit about yourself" maxlength="300"></textarea>
+              <span class="char-count" id="bio-count">0 / 300</span>
+            </div>
+
+            <div class="form-group">
+              <label for="avatar-url">Avatar URL</label>
+              <input type="url" id="avatar-url" name="avatarUrl" placeholder="https://example.com/avatar.png" />
+              <img id="avatar-preview" class="avatar-preview" src="" alt="Avatar preview" hidden />
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Preferences</legend>
+
+            <div class="form-group">
+              <label for="theme">Theme</label>
+              <select id="theme" name="theme">
+                <option value="system">System default</option>
+                <option value="light">Light</option>
+                <option value="dark">Dark</option>
+              </select>
+            </div>
+
+            <div class="form-group form-group--checkbox">
+              <input type="checkbox" id="notify-email" name="notifyEmail" />
+              <label for="notify-email">Email notifications</label>
+            </div>
+
+            <div class="form-group form-group--checkbox">
+              <input type="checkbox" id="notify-browser" name="notifyBrowser" />
+              <label for="notify-browser">Browser notifications</label>
+            </div>
+          </fieldset>
+
+          <div class="form-actions">
+            <button type="submit" class="btn btn--primary">Save Changes</button>
+            <button type="button" class="btn btn--secondary" id="reset-btn">Reset</button>
+          </div>
+
+          <p class="save-status" id="save-status" hidden></p>
+        </form>
+      </section>
     </main>
 
     <footer>
